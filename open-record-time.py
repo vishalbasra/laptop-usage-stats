@@ -1,5 +1,10 @@
 # Generate and store the start-up time of the Application
 import json, datetime
+from os.path import expanduser
+
+# build your home directory
+homedir = expanduser("~")
+
 # calculate the time
 time_today = datetime.datetime.now()
 time_today = time_today.isoformat()

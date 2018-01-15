@@ -37,7 +37,7 @@ temp_dict['Total Time'] = diff
 
 # read the current and main disc 
 #temp_dict = json.dumps(temp_dict)
-main_filename = 'main_dict.json'
+main_filename = 'usage_statistics.json'
 
 # This is the main file where all the data will be stored, you may choose to upload it to a repository of your choosing. 
 # This path may be different from the path of the temp file, but needs to exist with appropriate permissions
@@ -45,7 +45,7 @@ main_filename = 'main_dict.json'
 # See also README
 
 
-with open ('%s/Documents/Own/laptop-usage-stats/%s'%(homedir,main_filename)) as json_fila:
+with open ('%s/Documents/Own/time-stats/%s'%(homedir,main_filename)) as json_fila:
     main_dict = json.load(json_fila)
 
 # append the temporary calculated dict to the main disc, write and finish
@@ -53,5 +53,5 @@ with open ('%s/Documents/Own/laptop-usage-stats/%s'%(homedir,main_filename)) as 
 main_dict['Statistics'][date_today] = temp_dict
 
 # write the main dict to the file and finish!
-with open ('%s/Documents/Own/laptop-usage-stats/%s'%(homedir,main_filename), 'w') as outfile:
+with open ('%s/Documents/Own/time-stats/%s'%(homedir,main_filename), 'w') as outfile:
     json.dump(main_dict, outfile, indent=4, sort_keys=True)
