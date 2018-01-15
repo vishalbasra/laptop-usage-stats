@@ -1,5 +1,7 @@
+[See Docuentation at](http://www.white-turtle.org/rambling/2018/01/15/Work-Time.html)
 # laptop-usage-stats
 Usage statistics of a laptop(running osx/macos) based on the run-time of an Application
+
 
 ## Example of how to start the counter
 
